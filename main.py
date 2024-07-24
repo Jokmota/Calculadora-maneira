@@ -4,8 +4,8 @@ from tkinter import ttk
 
 # Definindo as cores
 cor1_roxa = '#9842f5'
-cor3_cinza_escuro = '#14171c'
-cor4_cinza = '#9c9c9c'
+cor2_cinza_escuro = '#14171c'
+cor3_cinza = '#9c9c9c'
 
 # entrada de valores
 def entrar_valores(event):
@@ -48,7 +48,7 @@ janela.grid_rowconfigure(1, weight=4)
 janela.grid_columnconfigure(0, weight=1)
 
 # Frame da tela
-frame_tela = Frame(janela, bg=cor3_cinza_escuro)
+frame_tela = Frame(janela, bg=cor2_cinza_escuro)
 frame_tela.grid(row=0, column=0, sticky=NSEW)
 
 # Frame do corpo
@@ -66,7 +66,7 @@ todos_valores = ''
 
 # Criando label para exibir os valores
 valor_texto = StringVar()
-app_label = Label(frame_tela, textvariable=valor_texto, width=16, height=2, padx=7, relief=FLAT, anchor='e', justify=RIGHT, font=('Ivy 18'), bg=cor3_cinza_escuro, fg=cor1_roxa)
+app_label = Label(frame_tela, textvariable=valor_texto, width=16, height=2, padx=7, relief=FLAT, anchor='e', justify=RIGHT, font=('Ivy 18'), bg=cor2_cinza_escuro, fg=cor1_roxa)
 app_label.pack(expand=True, fill='both')
 
 # Lista de botões e configs
@@ -75,20 +75,20 @@ botoes = [
     ('%', 0, 1, 1, 1, lambda: entrar_valores('%'), cor1_roxa),
     ('/', 0, 2, 1, 1, lambda: entrar_valores('/'), cor1_roxa),
     ('*', 0, 3, 1, 1, lambda: entrar_valores('*'), cor1_roxa),
-    ('7', 1, 0, 1, 1, lambda: entrar_valores('7'), cor4_cinza),
-    ('8', 1, 1, 1, 1, lambda: entrar_valores('8'), cor4_cinza),
-    ('9', 1, 2, 1, 1, lambda: entrar_valores('9'), cor4_cinza),
+    ('7', 1, 0, 1, 1, lambda: entrar_valores('7'), cor3_cinza),
+    ('8', 1, 1, 1, 1, lambda: entrar_valores('8'), cor3_cinza),
+    ('9', 1, 2, 1, 1, lambda: entrar_valores('9'), cor3_cinza),
     ('-', 1, 3, 1, 1, lambda: entrar_valores('-'), cor1_roxa),
-    ('4', 2, 0, 1, 1, lambda: entrar_valores('4'), cor4_cinza),
-    ('5', 2, 1, 1, 1, lambda: entrar_valores('5'), cor4_cinza),
-    ('6', 2, 2, 1, 1, lambda: entrar_valores('6'), cor4_cinza),
+    ('4', 2, 0, 1, 1, lambda: entrar_valores('4'), cor3_cinza),
+    ('5', 2, 1, 1, 1, lambda: entrar_valores('5'), cor3_cinza),
+    ('6', 2, 2, 1, 1, lambda: entrar_valores('6'), cor3_cinza),
     ('+', 2, 3, 1, 1, lambda: entrar_valores('+'), cor1_roxa),
-    ('1', 3, 0, 1, 1, lambda: entrar_valores('1'), cor4_cinza),
-    ('2', 3, 1, 1, 1, lambda: entrar_valores('2'), cor4_cinza),
-    ('3', 3, 2, 1, 1, lambda: entrar_valores('3'), cor4_cinza),
+    ('1', 3, 0, 1, 1, lambda: entrar_valores('1'), cor3_cinza),
+    ('2', 3, 1, 1, 1, lambda: entrar_valores('2'), cor3_cinza),
+    ('3', 3, 2, 1, 1, lambda: entrar_valores('3'), cor3_cinza),
     ('=', 3, 3, 2, 1, calcular, cor1_roxa),
-    ('0', 4, 0, 1, 2, lambda: entrar_valores('0'), cor4_cinza),
-    ('.', 4, 2, 1, 1, lambda: entrar_valores('.'), cor4_cinza)
+    ('0', 4, 0, 1, 2, lambda: entrar_valores('0'), cor3_cinza),
+    ('.', 4, 2, 1, 1, lambda: entrar_valores('.'), cor3_cinza)
 ]
 
 # Botões com a formatação
